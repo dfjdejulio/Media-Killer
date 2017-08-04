@@ -1,0 +1,11 @@
+ [
+  {
+		"trigger": {
+            "url-filter": ".*",
+            "resource-type": ["media"]
+		},
+		"action": {
+            "type": "ignore-previous-rules"
+		}
+  }
+]

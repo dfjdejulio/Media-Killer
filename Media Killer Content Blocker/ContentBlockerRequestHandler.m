@@ -15,7 +15,16 @@
 @implementation ContentBlockerRequestHandler
 
 - (void)beginRequestWithExtensionContext:(NSExtensionContext *)context {
-    NSItemProvider *attachment = [[NSItemProvider alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"blockerList" withExtension:@"json"]];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSURL *jsonUrl;
+    
+    if ([defaults boolForKey:@"enabled_preference"]) {
+        jsonUrl = [[NSBundle mainBundle] URLForResource:@"blockAllMedia" withExtension:@"json"];
+    } else {
+        jsonUrl = [[NSBundle mainBundle] URLForResource:@"doNotBlockAllMedia" withExtension:@"json"];
+    }
+    
+    NSItemProvider *attachment = [[NSItemProvider alloc] initWithContentsOfURL: jsonUrl];
     
     NSExtensionItem *item = [[NSExtensionItem alloc] init];
     item.attachments = @[attachment];

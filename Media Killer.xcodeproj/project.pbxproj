@@ -13,9 +13,11 @@
 		472DD4351F34FF6A008DD6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472DD4331F34FF6A008DD6BA /* Main.storyboard */; };
 		472DD4371F34FF6B008DD6BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472DD4361F34FF6B008DD6BA /* Assets.xcassets */; };
 		472DD43A1F34FF6B008DD6BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472DD4381F34FF6B008DD6BA /* LaunchScreen.storyboard */; };
-		472DD4481F34FF8D008DD6BA /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 472DD4471F34FF8D008DD6BA /* blockerList.json */; };
+		472DD4481F34FF8D008DD6BA /* blockAllMedia.json in Resources */ = {isa = PBXBuildFile; fileRef = 472DD4471F34FF8D008DD6BA /* blockAllMedia.json */; };
 		472DD44B1F34FF8D008DD6BA /* ContentBlockerRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 472DD44A1F34FF8D008DD6BA /* ContentBlockerRequestHandler.m */; };
 		472DD44F1F34FF8D008DD6BA /* Media Killer Content Blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 472DD4451F34FF8C008DD6BA /* Media Killer Content Blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		472DD4551F350D7F008DD6BA /* doNotBlockAllMedia.json in Resources */ = {isa = PBXBuildFile; fileRef = 472DD4541F350D7F008DD6BA /* doNotBlockAllMedia.json */; };
+		47D72EDE1F350F980083A14F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 47D72EDD1F350F980083A14F /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +56,13 @@
 		472DD4391F34FF6B008DD6BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		472DD43B1F34FF6B008DD6BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		472DD4451F34FF8C008DD6BA /* Media Killer Content Blocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Media Killer Content Blocker.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		472DD4471F34FF8D008DD6BA /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		472DD4471F34FF8D008DD6BA /* blockAllMedia.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockAllMedia.json; sourceTree = "<group>"; };
 		472DD4491F34FF8D008DD6BA /* ContentBlockerRequestHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentBlockerRequestHandler.h; sourceTree = "<group>"; };
 		472DD44A1F34FF8D008DD6BA /* ContentBlockerRequestHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentBlockerRequestHandler.m; sourceTree = "<group>"; };
 		472DD44C1F34FF8D008DD6BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		472DD4541F350D7F008DD6BA /* doNotBlockAllMedia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = doNotBlockAllMedia.json; sourceTree = "<group>"; };
+		47D72EDD1F350F980083A14F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		47F698091F351560004035DD /* Media Killer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Media Killer.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +104,7 @@
 		472DD4291F34FF6A008DD6BA /* Media Killer */ = {
 			isa = PBXGroup;
 			children = (
+				47F698091F351560004035DD /* Media Killer.entitlements */,
 				472DD42D1F34FF6A008DD6BA /* AppDelegate.h */,
 				472DD42E1F34FF6A008DD6BA /* AppDelegate.m */,
 				472DD4301F34FF6A008DD6BA /* ViewController.h */,
@@ -108,6 +114,7 @@
 				472DD4381F34FF6B008DD6BA /* LaunchScreen.storyboard */,
 				472DD43B1F34FF6B008DD6BA /* Info.plist */,
 				472DD42A1F34FF6A008DD6BA /* Supporting Files */,
+				47D72EDD1F350F980083A14F /* Settings.bundle */,
 			);
 			path = "Media Killer";
 			sourceTree = "<group>";
@@ -123,7 +130,8 @@
 		472DD4461F34FF8D008DD6BA /* Media Killer Content Blocker */ = {
 			isa = PBXGroup;
 			children = (
-				472DD4471F34FF8D008DD6BA /* blockerList.json */,
+				472DD4471F34FF8D008DD6BA /* blockAllMedia.json */,
+				472DD4541F350D7F008DD6BA /* doNotBlockAllMedia.json */,
 				472DD4491F34FF8D008DD6BA /* ContentBlockerRequestHandler.h */,
 				472DD44A1F34FF8D008DD6BA /* ContentBlockerRequestHandler.m */,
 				472DD44C1F34FF8D008DD6BA /* Info.plist */,
@@ -183,6 +191,11 @@
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 2ZM9YDU9XJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					472DD4441F34FF8C008DD6BA = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -215,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47D72EDE1F350F980083A14F /* Settings.bundle in Resources */,
 				472DD43A1F34FF6B008DD6BA /* LaunchScreen.storyboard in Resources */,
 				472DD4371F34FF6B008DD6BA /* Assets.xcassets in Resources */,
 				472DD4351F34FF6A008DD6BA /* Main.storyboard in Resources */,
@@ -225,7 +239,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				472DD4481F34FF8D008DD6BA /* blockerList.json in Resources */,
+				472DD4481F34FF8D008DD6BA /* blockAllMedia.json in Resources */,
+				472DD4551F350D7F008DD6BA /* doNotBlockAllMedia.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +381,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -375,24 +391,30 @@
 		472DD43F1F34FF6B008DD6BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Media Killer/Media Killer.entitlements";
 				DEVELOPMENT_TEAM = 2ZM9YDU9XJ;
 				INFOPLIST_FILE = "Media Killer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.aisb.Media-Killer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
 		472DD4401F34FF6B008DD6BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = arm64;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Media Killer/Media Killer.entitlements";
 				DEVELOPMENT_TEAM = 2ZM9YDU9XJ;
 				INFOPLIST_FILE = "Media Killer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.aisb.Media-Killer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
@@ -441,6 +463,7 @@
 				472DD4401F34FF6B008DD6BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		472DD4501F34FF8D008DD6BA /* Build configuration list for PBXNativeTarget "Media Killer Content Blocker" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +472,7 @@
 				472DD4521F34FF8D008DD6BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

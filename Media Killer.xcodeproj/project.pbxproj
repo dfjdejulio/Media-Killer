@@ -13,7 +13,34 @@
 		472DD4351F34FF6A008DD6BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472DD4331F34FF6A008DD6BA /* Main.storyboard */; };
 		472DD4371F34FF6B008DD6BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472DD4361F34FF6B008DD6BA /* Assets.xcassets */; };
 		472DD43A1F34FF6B008DD6BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472DD4381F34FF6B008DD6BA /* LaunchScreen.storyboard */; };
+		472DD4481F34FF8D008DD6BA /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 472DD4471F34FF8D008DD6BA /* blockerList.json */; };
+		472DD44B1F34FF8D008DD6BA /* ContentBlockerRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 472DD44A1F34FF8D008DD6BA /* ContentBlockerRequestHandler.m */; };
+		472DD44F1F34FF8D008DD6BA /* Media Killer Content Blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 472DD4451F34FF8C008DD6BA /* Media Killer Content Blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		472DD44D1F34FF8D008DD6BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 472DD41F1F34FF6A008DD6BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 472DD4441F34FF8C008DD6BA;
+			remoteInfo = "Media Killer Content Blocker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		472DD4531F34FF8D008DD6BA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				472DD44F1F34FF8D008DD6BA /* Media Killer Content Blocker.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		472DD4271F34FF6A008DD6BA /* Media Killer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Media Killer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +53,22 @@
 		472DD4361F34FF6B008DD6BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		472DD4391F34FF6B008DD6BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		472DD43B1F34FF6B008DD6BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		472DD4451F34FF8C008DD6BA /* Media Killer Content Blocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Media Killer Content Blocker.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		472DD4471F34FF8D008DD6BA /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		472DD4491F34FF8D008DD6BA /* ContentBlockerRequestHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContentBlockerRequestHandler.h; sourceTree = "<group>"; };
+		472DD44A1F34FF8D008DD6BA /* ContentBlockerRequestHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContentBlockerRequestHandler.m; sourceTree = "<group>"; };
+		472DD44C1F34FF8D008DD6BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		472DD4241F34FF6A008DD6BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		472DD4421F34FF8C008DD6BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				472DD4291F34FF6A008DD6BA /* Media Killer */,
+				472DD4461F34FF8D008DD6BA /* Media Killer Content Blocker */,
 				472DD4281F34FF6A008DD6BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				472DD4271F34FF6A008DD6BA /* Media Killer.app */,
+				472DD4451F34FF8C008DD6BA /* Media Killer Content Blocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +120,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		472DD4461F34FF8D008DD6BA /* Media Killer Content Blocker */ = {
+			isa = PBXGroup;
+			children = (
+				472DD4471F34FF8D008DD6BA /* blockerList.json */,
+				472DD4491F34FF8D008DD6BA /* ContentBlockerRequestHandler.h */,
+				472DD44A1F34FF8D008DD6BA /* ContentBlockerRequestHandler.m */,
+				472DD44C1F34FF8D008DD6BA /* Info.plist */,
+			);
+			path = "Media Killer Content Blocker";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,15 +141,34 @@
 				472DD4231F34FF6A008DD6BA /* Sources */,
 				472DD4241F34FF6A008DD6BA /* Frameworks */,
 				472DD4251F34FF6A008DD6BA /* Resources */,
+				472DD4531F34FF8D008DD6BA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				472DD44E1F34FF8D008DD6BA /* PBXTargetDependency */,
 			);
 			name = "Media Killer";
 			productName = "Media Killer";
 			productReference = 472DD4271F34FF6A008DD6BA /* Media Killer.app */;
 			productType = "com.apple.product-type.application";
+		};
+		472DD4441F34FF8C008DD6BA /* Media Killer Content Blocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 472DD4501F34FF8D008DD6BA /* Build configuration list for PBXNativeTarget "Media Killer Content Blocker" */;
+			buildPhases = (
+				472DD4411F34FF8C008DD6BA /* Sources */,
+				472DD4421F34FF8C008DD6BA /* Frameworks */,
+				472DD4431F34FF8C008DD6BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Media Killer Content Blocker";
+			productName = "Media Killer Content Blocker";
+			productReference = 472DD4451F34FF8C008DD6BA /* Media Killer Content Blocker.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -109,6 +180,11 @@
 				ORGANIZATIONNAME = "Doug DeJulio";
 				TargetAttributes = {
 					472DD4261F34FF6A008DD6BA = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2ZM9YDU9XJ;
+						ProvisioningStyle = Automatic;
+					};
+					472DD4441F34FF8C008DD6BA = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 2ZM9YDU9XJ;
 						ProvisioningStyle = Automatic;
@@ -129,6 +205,7 @@
 			projectRoot = "";
 			targets = (
 				472DD4261F34FF6A008DD6BA /* Media Killer */,
+				472DD4441F34FF8C008DD6BA /* Media Killer Content Blocker */,
 			);
 		};
 /* End PBXProject section */
@@ -141,6 +218,14 @@
 				472DD43A1F34FF6B008DD6BA /* LaunchScreen.storyboard in Resources */,
 				472DD4371F34FF6B008DD6BA /* Assets.xcassets in Resources */,
 				472DD4351F34FF6A008DD6BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		472DD4431F34FF8C008DD6BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				472DD4481F34FF8D008DD6BA /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +242,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		472DD4411F34FF8C008DD6BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				472DD44B1F34FF8D008DD6BA /* ContentBlockerRequestHandler.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		472DD44E1F34FF8D008DD6BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 472DD4441F34FF8C008DD6BA /* Media Killer Content Blocker */;
+			targetProxy = 472DD44D1F34FF8D008DD6BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		472DD4331F34FF6A008DD6BA /* Main.storyboard */ = {
@@ -295,6 +396,32 @@
 			};
 			name = Release;
 		};
+		472DD4511F34FF8D008DD6BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEVELOPMENT_TEAM = 2ZM9YDU9XJ;
+				INFOPLIST_FILE = "Media Killer Content Blocker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.aisb.Media-Killer.Media-Killer-Content-Blocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		472DD4521F34FF8D008DD6BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEVELOPMENT_TEAM = 2ZM9YDU9XJ;
+				INFOPLIST_FILE = "Media Killer Content Blocker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.aisb.Media-Killer.Media-Killer-Content-Blocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -312,6 +439,14 @@
 			buildConfigurations = (
 				472DD43F1F34FF6B008DD6BA /* Debug */,
 				472DD4401F34FF6B008DD6BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		472DD4501F34FF8D008DD6BA /* Build configuration list for PBXNativeTarget "Media Killer Content Blocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				472DD4511F34FF8D008DD6BA /* Debug */,
+				472DD4521F34FF8D008DD6BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
